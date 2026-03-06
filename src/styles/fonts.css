@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* SF Pro system font stack for macOS fidelity */
+:root {
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+  --font-text: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif;
+  --font-mono: 'SF Mono', 'Monaco', 'Menlo', 'Courier New', monospace;
+}

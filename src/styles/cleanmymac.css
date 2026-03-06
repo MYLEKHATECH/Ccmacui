@@ -1,0 +1,130 @@
+/* CleanMyMac Design System — Animations & Keyframes */
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes radar-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes stagger-fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes confetti-burst {
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  100% { transform: scale(1.5) rotate(720deg); opacity: 0; }
+}
+
+@keyframes sparkline-draw {
+  from { stroke-dashoffset: 200; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes ring-fill {
+  from { stroke-dashoffset: 502; }
+}
+
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-20px) scale(1.1); opacity: 1; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 16px 2px rgba(46, 156, 106, 0.3); }
+  50% { box-shadow: 0 0 32px 8px rgba(46, 156, 106, 0.6); }
+}
+
+@keyframes threat-pulse {
+  0%, 100% { box-shadow: 0 0 8px 1px rgba(224, 82, 82, 0.3); }
+  50% { box-shadow: 0 0 20px 4px rgba(224, 82, 82, 0.7); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slide-down-popover {
+  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-pulse-ring { animation: pulse-ring 2s ease-in-out infinite; }
+.animate-shimmer { animation: shimmer 1.5s ease-in-out infinite; }
+.animate-radar { animation: radar-rotate 4s linear infinite; }
+.animate-fade-slide-up { animation: fade-slide-up 0.4s ease-out forwards; }
+.animate-stagger-1 { animation: stagger-fade 0.3s ease-out 0.08s both; }
+.animate-stagger-2 { animation: stagger-fade 0.3s ease-out 0.16s both; }
+.animate-stagger-3 { animation: stagger-fade 0.3s ease-out 0.24s both; }
+.animate-stagger-4 { animation: stagger-fade 0.3s ease-out 0.32s both; }
+.animate-stagger-5 { animation: stagger-fade 0.3s ease-out 0.40s both; }
+.animate-glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
+.animate-threat-pulse { animation: threat-pulse 2s ease-in-out infinite; }
+.animate-slide-in-right { animation: slide-in-right 0.28s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.animate-scale-in { animation: scale-in 0.2s ease-out forwards; }
+.animate-slide-down-popover { animation: slide-down-popover 0.22s cubic-bezier(0.16,1,0.3,1) forwards; }
+.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+.animate-orb-float { animation: orb-float 4s ease-in-out infinite; }
+.animate-count-up { animation: count-up 0.5s ease-out forwards; }
+.animate-sparkline { stroke-dasharray: 200; animation: sparkline-draw 0.6s ease-out forwards; }
+.animate-ring-fill { animation: ring-fill 1.2s ease-out forwards; }
+
+/* Treemap hover effect */
+.treemap-cell {
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+.treemap-cell:hover {
+  filter: brightness(1.3);
+  transform: scale(1.01);
+  z-index: 10;
+}
+
+/* Custom scrollbar for dark theme */
+.dark-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.dark-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dark-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+}
+.dark-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.25);
+}
